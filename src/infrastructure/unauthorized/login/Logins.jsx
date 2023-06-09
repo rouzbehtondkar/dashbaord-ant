@@ -7,10 +7,6 @@ import axios from "axios";
 import { useNavigate ,Router,Routes,Link} from "react-router-dom";
 import "./Logins.css";
 
-
-
-const Logins = () => {
-  const [authenticated, setAuthenticated] = useState(false);
   const [token, setToken] = useState("");
   const navigate = useNavigate();
 
