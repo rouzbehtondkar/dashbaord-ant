@@ -11,8 +11,9 @@ import RouteAuthorized from '../../route/RouteAuthorized'
 import { useLocation, useNavigate } from "react-router-dom";
 import  { useEffect } from 'react';
 import SlidBar from "./slidbar/SlidBar";
+import Footers from "./footer/Footers";
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
     key,
@@ -75,13 +76,14 @@ const Authoriz = () => {
           <RouteAuthorized/>
        
         </Content>
-        <Footer
+        {/* <Footer
           style={{
             textAlign: "center",
           }}
         >
           Ant Design ©2023 Created by Ant UED
-        </Footer>
+        </Footer> */}
+        <Footers/>
       </Layout>
     </Layout>
 </>

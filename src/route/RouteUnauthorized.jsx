@@ -1,7 +1,7 @@
 import React from 'react'
 import Logins from '../infrastructure/unauthorized/login/Logins'
 import Regester from '../infrastructure/unauthorized/regester/Regester'
-import Forget from '../infrastructure/unauthorized/forget/forget'
+import Forget from '../infrastructure/unauthorized/forget/Forget'
 import { Route,Routes } from 'react-router-dom'
 
 export default function RouteUnauthorized() {

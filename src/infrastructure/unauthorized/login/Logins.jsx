@@ -7,19 +7,16 @@ import axios from "axios";
 import { useNavigate ,Router,Routes,Link} from "react-router-dom";
 import "./Logins.css";
 
+const Logins=()=>{
   const [token, setToken] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (authenticated) {
-      navigate("/");
-
-      if (typeof window !== 'undefined') {
-
+    
         localStorage.setItem('user',token);
-      }
-    }
-  }, [authenticated, navigate, token]);
+      
+    
+   }, [ navigate, token]);
 
 
   const formik = useFormik({
@@ -44,7 +41,7 @@ import "./Logins.css";
         description: "You have successfully logged in.",
       });
       const { token } = response.data;
-      setAuthenticated(true);
+      // setAuthenticated(true);
       setToken(token);
     } catch (error) {
       console.log("Error occurred while processing the request.", error);
@@ -84,8 +81,8 @@ import "./Logins.css";
               {isSubmitting ? "Logging in..." : "Login"}
             </Button>
           </Form.Item>
-          <Link to={"/regester"} >forget password?</Link>
-          <Link to={"/forget"}>sing up?</Link>
+          <Link to={"/forget"} >forget password?</Link>
+          <Link to={"/regester"}>sing up?</Link>
 
         </Form>
       </div>
